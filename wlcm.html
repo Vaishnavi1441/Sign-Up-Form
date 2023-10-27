@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup form</title>
+    <style>
+        body{
+            overflow: hidden;
+            background-color:#88a6dc;
+        }
+    .outro-overlay {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(0, 0, 0);
+    position: relative;
+}
+.outro-overlay > #signedUp-illustration {
+    height: 90%;
+    z-index: 2;
+}
+.outro-overlay > .shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;
+    width: 150%;
+}
+.outro-overlay > .outro-greeting {
+    z-index: 3;
+    font-weight: 700;
+    letter-spacing: .02em;
+    word-spacing: .1em;
+    font-size: 30px;
+}
+.slideUp-animation {
+    animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideUp;animation-delay: 0s;
+} 
+.slideRight-animation {
+    animation: 1.3s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;
+}                             
+@keyframes slideUp {  
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: inherit;  }    
+}                    
+@keyframes slideRight {              
+    0% { opacity: 0; transform: translateX(30px); }                
+    100% { opacity: 1; transform: translateX(0);   }
+}
+</style>
+</head>
+<body>
+    <section class="outro-overlay disabled slideUp-animation">
+        <h1 class="outro-greeting">Welcome Back...!</h1>
+        <img src="img/thanks.svg" width="800" height="800px" alt="" id="signedUp-illustration" class="slideRight-animation">
+    </section>
+</body>
+</html>
